@@ -38,11 +38,11 @@ def calc_pred_importance(im_loc,net):
     return net.blobs['loss'].data[0]
 
 # which images to compute predictions for
-imdir = "../../data/massvis600x600/valid/" # CHANGETHIS
+imdir = "../../data/english/" # CHANGETHIS
 allfiles = os.listdir(imdir)
 
 # where to save the predictions
-savedir = "../../data/massvis600x600/predictions/" # CHANGETHIS
+savedir = "../../data/predictions/" # CHANGETHIS
 os.makedirs(savedir)
 
 net_mv = caffe.Net('deploy.prototxt','../models/massvis_fcn32.caffemodel',caffe.TEST) # CHANGETHIS
